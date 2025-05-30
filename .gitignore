@@ -1,0 +1,60 @@
+# Ignore all CSV files
+*.csv
+
+# Ignore all JSON files
+*.json
+
+# Ignore specific large CSV files
+processed_data 2.csv
+Enron.csv
+
+# Ignore specific JSON files in model directories
+fine_tuned_bert_spam_classifier/*.json
+spam_classifier/*.json
+
+# Ignore large model files
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.h5
+*.hdf5
+*.ckpt
+*.pkl
+*.model
+*.joblib
+
+# Ignore specific large model files
+fine_tuned_bert_spam_classifier/model.pt
+fine_tuned_bert_spam_classifier/model.safetensors
+fine_tuned_bert_spam_classifier/training_args.bin
+
+# Python specific ignores
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Logs and results
+logs/
+results/
+*.log 
