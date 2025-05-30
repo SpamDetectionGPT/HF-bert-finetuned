@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from transformers import BertTokenizer
 import torch
+import json
 
 # Check for CUDA availability
 if torch.cuda.is_available():
@@ -142,6 +143,11 @@ print("Training finished.")
 print("Evaluating the final model on the validation set...")
 eval_results = trainer.evaluate()
 print(f"Evaluation results: {eval_results}")
+
+# Save evaluation results to a file
+with open('evaluation_results.json', 'w') as f:
+    json.dump(eval_results, f, indent=4)
+print("Evaluation results saved to evaluation_results.json")
 
 # --- Save the Model and Tokenizer ---
 model_save_path = "./fine_tuned_bert_spam_classifier"
