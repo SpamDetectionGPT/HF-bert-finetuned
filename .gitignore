@@ -1,8 +1,9 @@
 # Ignore all CSV files
 *.csv
 
-# Ignore all JSON files
+# Ignore all JSON files except evaluation_results.json
 *.json
+!evaluation_results.json
 
 # Ignore specific large CSV files
 processed_data 2.csv
