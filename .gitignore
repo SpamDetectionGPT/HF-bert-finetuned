@@ -25,6 +25,10 @@ spam_classifier/*.json
 *.model
 *.joblib
 
+# Ignore archives
+*.zip
+*.rar
+
 # Ignore specific large model files
 fine_tuned_bert_spam_classifier/model.pt
 fine_tuned_bert_spam_classifier/model.safetensors
